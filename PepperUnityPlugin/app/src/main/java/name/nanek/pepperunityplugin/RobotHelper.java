@@ -15,8 +15,12 @@ public class RobotHelper {
     private static final String TAG = RobotHelper.class.getSimpleName();
 
     public static void say(final Context context) {
+        say(context, "Hello, Unity Args!");
+    }
+
+    public static void say(final Context context, final String text) {
         Say say = new Say(context);
-        say.run("Hello, Unity!").then(Qi.onUiThread(new QiCallback<Void>() {
+        say.run(text).then(Qi.onUiThread(new QiCallback<Void>() {
             @Override
             public void onResult(Void ignore) {
                 Log.d(TAG, "result on thread " + Thread.currentThread().getName());
