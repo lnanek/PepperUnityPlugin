@@ -1,4 +1,4 @@
-package name.nanek.pepperunityplugin;
+package name.nanek.pepperandroidlibrary;
 
 import android.content.Context;
 import android.util.Log;
@@ -15,7 +15,7 @@ public class RobotHelper {
     private static final String TAG = RobotHelper.class.getSimpleName();
 
     public static void say(final Context context) {
-        say(context, "Hello, Unity Args!");
+        say(context, "Hello, Unity AAR Assets");
     }
 
     public static void say(final Context context, final String text) {

@@ -2,11 +2,8 @@ package name.nanek.pepperunityplugin;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 
-import com.aldebaran.qi.QiCallback;
-import com.aldebaran.qi.sdk.Qi;
-import com.aldebaran.qi.sdk.object.interaction.Say;
+import name.nanek.pepperandroidlibrary.RobotHelper;
 
 public class MainActivity extends AppCompatActivity {
 
