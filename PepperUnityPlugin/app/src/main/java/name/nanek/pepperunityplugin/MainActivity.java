@@ -17,23 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Say say = new Say(this);
-        say.run("Hello, world!").then(Qi.onUiThread(new QiCallback<Void>() {
-            @Override
-            public void onResult(Void ignore) {
-                Log.d(TAG, "result on thread " + Thread.currentThread().getName());
-            }
-
-            @Override
-            public void onError(Throwable error) {
-                Log.e(TAG, "error", error);
-            }
-
-            @Override
-            public void onCancel() {
-                Log.w(TAG, "cancel");
-            }
-        }));
+        RobotHelper.say(this);
     }
 
 }
