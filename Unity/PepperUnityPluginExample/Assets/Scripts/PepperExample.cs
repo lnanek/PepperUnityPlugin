@@ -20,10 +20,12 @@ public class PepperExample : MonoBehaviour {
 		AndroidJavaClass unity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer");
 		AndroidJavaObject currentActivity = unity.GetStatic<AndroidJavaObject> ("currentActivity");
 
+		//AndroidJavaObject applicationContext = currentActivity.Call ("getApplicationContext");
+
 		// Get the Robot helper class
-		AndroidJavaClass helper = new AndroidJavaClass ("name.nanek.pepperunityplugin.RobotHelper");
+		AndroidJavaClass helper = new AndroidJavaClass ("name.nanek.pepperandroidlibrary.RobotHelper");
 
 		// Call the say method passing it a context and a String with something to say
-		helper.Call("say", currentActivity, subject);
+		helper.CallStatic("say", currentActivity, subject);
 	}
 }

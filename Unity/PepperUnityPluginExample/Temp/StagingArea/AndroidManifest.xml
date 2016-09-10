@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="name.nanek.pepperunityexample" android:installLocation="preferExternal">
+  <uses-sdk android:minSdkVersion="22" android:targetSdkVersion="24" />
+  <uses-feature android:name="com.softbank.hardware.pepper" />
+  <uses-permission android:name="com.aldebaran.permission.ROBOT" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <application android:debuggable="false" android:isGame="true" android:banner="@drawable/app_banner">
+    <service android:exported="false" android:name="com.aldebaran.apps.qichatplayer.QiChatPlayerService">
+    </service>
+  </application>
+  <uses-feature android:glEsVersion="0x00020000" />
+  <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+  <uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false" />
+  <uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false" />
+</manifest>
